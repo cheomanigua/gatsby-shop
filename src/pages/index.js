@@ -33,7 +33,7 @@ const categories = [
 export default () =>
   <Layout>
     <header>
-      <h1>Pentáculos y Pentagramas</h1>
+      <h1>Your Shop or TSA page</h1>
     </header>
 
     <main>

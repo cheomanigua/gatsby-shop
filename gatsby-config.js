@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.estrella5puntas.com',
-    title: "Pentáculos y Pentagramas",
-    description: "Toda la información sobre pentáculos y pentagramas, así como tienda para adquirir todo tipo de accesorios sobre esta fascinante temática.",
+    title: "Your Shop or TSA name",
+    description: "An awesome description of your site so it fits well in Google Search engine",
     author: "Sergio Sanchez",
   },
   plugins: [
