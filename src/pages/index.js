@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { computer, hdd, pendrive, phone } from '../components/images'
 import Shop from '../components/shop'
@@ -30,32 +31,48 @@ const categories = [
   }
 ];
 
-export default () =>
-  <Layout>
-    <header>
-      <h1>Your Shop or TSA page</h1>
-    </header>
+const Index = ({ data }) => {
+  return (
+    <Layout>
+      <header>
+        <h1>{data.site.siteMetadata.title}</h1>
+      </header>
 
-    <main>
-      <h3>h2 title</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ipsam, alias rerum doloremque aperiam similique
+      <main>
+        <h3>h2 title</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ipsam, alias rerum doloremque aperiam similique
       ratione consequatur nam minima error, explicabo debitis odio quod minus sequi voluptatibus, deserunt sed rem!</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia unde neque, ullam eum culpa minima nisi
-        reiciendis ducimus modi molestias voluptas laudantium nostrum iusto est, libero pariatur dolorem? Vero, veniam.
-    </p>
-      <h3>h3 title</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos aspernatur est natus ipsa vel quas pariatur quod
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia unde neque, ullam eum culpa minima nisi
+          reiciendis ducimus modi molestias voluptas laudantium nostrum iusto est, libero pariatur dolorem? Vero, veniam.
+        </p>
+        <h3>h3 title</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos aspernatur est natus ipsa vel quas pariatur quod
       libero, facilis reiciendis nesciunt? Quia fugiat error dolorem rerum voluptatum illum temporibus eum?</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae a doloremque harum sit reprehenderit pariatur
-        beatae molestiae mollitia fugit voluptatem illum inventore, dignissimos illo deserunt consequatur tempora
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae a doloremque harum sit reprehenderit pariatur
+          beatae molestiae mollitia fugit voluptatem illum inventore, dignissimos illo deserunt consequatur tempora
       molestias fugiat qui.</p>
-    </main>
+      </main>
 
-    <section>
-      <h2>Shop Categories</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam placeat tempore voluptatibus iste atque blanditiis nam. Aperiam a magnam suscipit!</p>
-      
+      <section>
+        <h2>Shop Categories</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam placeat tempore voluptatibus iste atque blanditiis nam. Aperiam a magnam suscipit!</p>
+
         <Shop cards={categories} />
 
-    </section>
-  </Layout> 
+      </section>
+    </Layout>
+  )
+}
+
+export const query = graphql`
+  query HeaderPageQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
+
+export default Index
+

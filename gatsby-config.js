@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.estrella5puntas.com',
-    title: "Your Shop or TSA name",
+    siteUrl: 'https://www.mydomain.com',
+    title: "Your Shop or Nicho page",
     description: "An awesome description of your site so it fits well in Google Search engine",
     author: "Sergio Sanchez",
   },
