@@ -31,7 +31,7 @@ const categories = [
   }
 ];
 
-const Index = ({ data }) => {
+const IndexPage = ({ data }) => {
   return (
     <Layout>
       <header>
@@ -65,7 +65,7 @@ const Index = ({ data }) => {
 }
 
 export const query = graphql`
-  query HeaderPageQuery {
+  query IndexPageQuery {
     site {
       siteMetadata {
         title
@@ -74,5 +74,5 @@ export const query = graphql`
   }
 `
 
-export default Index
+export default IndexPage
 
