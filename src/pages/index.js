@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { computer, hdd, pendrive, phone } from '../components/images'
 import Shop from '../components/shop'
@@ -34,9 +33,7 @@ const categories = [
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <header>
-        <h1>{data.site.siteMetadata.title}</h1>
-      </header>
+      
 
       <main>
         <h3>h2 title</h3>
@@ -63,16 +60,6 @@ const IndexPage = ({ data }) => {
     </Layout>
   )
 }
-
-export const query = graphql`
-  query IndexPageQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
 
 export default IndexPage
 
